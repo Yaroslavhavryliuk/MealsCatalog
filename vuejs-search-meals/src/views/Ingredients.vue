@@ -6,6 +6,7 @@
     <input
       type="text"
       v-model="keyword"
+      maxlength = "50"
       class="rounded border-2 bg-white border-gray-200 focus:ring-orange-500 focus:border-orange-500 mb-3 w-full"
       placeholder="Search for Ingredients"
     />

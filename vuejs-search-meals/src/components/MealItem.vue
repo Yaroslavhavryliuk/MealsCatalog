@@ -8,12 +8,10 @@
       />
     </router-link>
     <div class="p-3">
-      <h3 class="font-bold">{{ meal.strMeal }}</h3>
-      <p class="mb-4">
-        {{ $filters.truncateWords(meal.strInstructions, 20) }}
-      </p>
+      <h3 class="font-bold mb-4">{{ meal.strMeal }}</h3>
       <div class="flex items-center justify-between">
         <YouTubeButton :href="meal.strYoutube" />
+        <OriginButton :href="meal.strSource" />
       </div>
     </div>
   </div>
@@ -21,6 +19,7 @@
 
 <script setup>
 import YouTubeButton from "./YouTubeButton.vue";
+import OriginButton from "./OriginButton.vue";
 
 const { meal } = defineProps({
   meal: {
